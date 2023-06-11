@@ -16,16 +16,10 @@ const deleteUser = (req, res) => {
     res.sendStatus(200);
   }
   
-const findUsers = (req, res) => {
-    const type = req.query.type
-    if(type) {
-      const usersOfType = users
-        .filter(u => u.type === type)
-      res.json(usersOfType)
-      return
-    }
+  const findUsers = (req, res) => {
+    const users = usersDao.findAllUsers();
     res.json(users)
-  }
+}
 
 const findUserById = (req, res) => {
     const userId = req.params.uid;
