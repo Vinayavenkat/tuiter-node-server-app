@@ -41,16 +41,14 @@ const createUser = (req, res) => {
     res.json(newUser);
   }
 
-const updateUser = (req, res) => {
+  const updateUser = (req, res) => {
     const userId = req.params['uid'];
     const updates = req.body;
-    users = users.map((usr) =>
-      usr._id === userId ?
-        {...usr, ...updates} :
-        usr
-    );
+    const newUser = usersDao.updateUser(userId, updates)
+    req.session['currentUser'] = newUser;
+    console.log(users);
     res.sendStatus(200);
-   }
+}
    
     
   
