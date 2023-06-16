@@ -12,4 +12,4 @@ const schema = mongoose.Schema({
   handle: String,
   liked: Boolean,
 }, {collection: 'tuits'});
-export default schema;
+export default schema; //
