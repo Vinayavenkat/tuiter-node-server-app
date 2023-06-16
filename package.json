@@ -31,5 +31,9 @@
     "express-session": "^1.17.3",
     "mongodb": "4.1",
     "mongoose": "^7.2.0"
-  }
+  },
+  "engines": {
+    "node": ">=14.20.1"
+  },
+  "devDependencies": {}
 }
