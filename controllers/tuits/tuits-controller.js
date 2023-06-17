@@ -8,11 +8,13 @@ const createTuit = async (req, res) => {
   res.json(insertedTuit);
 }
 
+
   
-  const findTuits = async (req, res) => {
-    const tuits = await tuitsDao.findTuits()
-    res.json(tuits);
- }
+const findTuits = async (req, res) => {
+  const tuits = await tuitsDao.findTuits()
+  res.json(tuits);
+}
+
  
   
  const deleteTuit = async (req, res) => {
@@ -28,6 +30,7 @@ const updateTuit = async (req, res) => {
                        .updateTuit(tuitdIdToUpdate, updates);
   res.json(status);
 }
+
  
 
 export default (app) => {
